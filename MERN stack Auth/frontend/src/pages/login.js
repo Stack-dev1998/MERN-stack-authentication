@@ -30,7 +30,7 @@ export default function Login() {
         throw new Error("Please fill all fields");
       await axios.post("http://localhost:5000/user/login", loginModal);
       data.logInHandler();
-      navigate("/user/dashboard", { replace: true });
+      navigate("/dashboard", { replace: true });
       setIsButtonClicked(false)
 
     } catch (error) {
